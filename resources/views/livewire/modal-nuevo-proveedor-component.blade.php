@@ -17,9 +17,9 @@
 							placeholder="@error('proveedor_name'){{ $message }} @else NOMBRE @enderror"
 							class="input input-sm input-bordered w-full @error('proveedor_name') border-red-500 text-red-500 @enderror" />
 					</label>
-					<label class="text-xs">Descripcion
+					<label class="text-xs">Descripción
 						<input wire:model='descripcion' type="text" value="{{$descripcion}}"
-							placeholder="@error('descripcion'){{ $message }} @else DESCRIPCION @enderror"
+							placeholder="@error('descripcion'){{ $message }} @else DESCRIPCIÓN @enderror"
 							class="input input-sm input-bordered w-full @error('descripcion') border-red-500 text-red-500 @enderror"
 							disabled />
 					</label>
@@ -44,8 +44,8 @@
 							@livewire('modal-nuevo-cc-component')
 						</div>
 					</div>
-					<label class="text-xs">Telefono
-						<input wire:model='tel' type="string" placeholder="@error('tel'){{ $message }} @else TELEFONO @enderror"
+					<label class="text-xs">Teléfono
+						<input wire:model='tel' type="string" placeholder="@error('tel'){{ $message }} @else TELÉFONO @enderror"
 							class="input input-sm input-bordered w-full @error('tel') border-red-500 text-red-500 @enderror" />
 					</label>
 					<label class="text-xs">Email

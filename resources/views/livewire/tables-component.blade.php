@@ -31,10 +31,10 @@
             <thead class="text-base uppercase">
                 <tr>
                     <th scope="col" class="text-xs">proveedor</th>
-                    <th scope="col" class="text-xs">numero factura</th>
+                    <th scope="col" class="text-xs">número factura</th>
                     <th scope="col" class="text-xs">vencimiento factura</th>
                     <th scope="col" class="text-xs">importe</th>
-                    <th scope="col" class="text-xs">accion</th>
+                    <th scope="col" class="text-xs">acción</th>
                 </tr>
             </thead>
             <tbody>

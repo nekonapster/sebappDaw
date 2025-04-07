@@ -28,10 +28,10 @@
                     @endif
 
 
-                    <span class="label-text">Numero</span>
+                    <span class="label-text">Número</span>
                     <span class="text-red-500"> <br> @error('numeroCC'){{$message}}@enderror </span>
                     <input wire:model="numeroCC" type="text" {{-- pattern="\d{8}" --}} minlength="8" maxlength="8" class="input input-bordered w-full mb-5 
-                        @error('numeroCC') border-red-500 @enderror" placeholder="Solo numeros sin decimal" required>
+                        @error('numeroCC') border-red-500 @enderror" placeholder="Solo números sin decimal" required>
 
                     <span class="label-text">Rubro</span>
                     <Select wire:model='rubro' class="select w-full select-bordered mb-5">
@@ -51,11 +51,11 @@
                         <option value="Servicios profesionales">Servicios profesionales</option>
                     </Select>
 
-                    <span class="label-text">Descripcion</span>
+                    <span class="label-text">Descripción</span>
                     <span class="text-error"> <br> @error('descripcion'){{$message}}@enderror</span>
                     <input wire:model='descripcion' type="text"
                         class="input input-bordered w-full mb-5 @error('descripcion') border-red-500 @enderror"
-                        placeholder="Minimo 5 caracteres">
+                        placeholder="Mínimo 5 caracteres">
 
                     <div class="flex justify-start w-full input input-bordered items-center mt-3">
                         <p>Tipo</p>

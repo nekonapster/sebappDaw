@@ -106,7 +106,7 @@
             </div>
 
         </div>
-        <p class="mt-1 text-xs">*Los campos de arriba solo admiten numeros con dos decimales.</p>
+        <p class="mt-1 text-xs">*Los campos de arriba solo admiten números con dos decimales.</p>
 
         <div>
             <div class="mt-10 flex justify-between items-center">

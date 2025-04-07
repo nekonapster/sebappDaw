@@ -57,7 +57,7 @@
             </select>
             <div class="flex justify-start">
                 <label class="cursor-pointer label text-sm md:text-xs -mt-1 px-0 mx-0 ml-3">
-                    Activacion
+                    Activación
                     <input wire:model='activacion' type="checkbox"
                         class="checkbox checkbox-secondary px-0 ml-2  @error('activacion')border-red-500 @enderror"
                         placeholder=" @error('activacion'){{$message}} @else Activacion @enderror" />

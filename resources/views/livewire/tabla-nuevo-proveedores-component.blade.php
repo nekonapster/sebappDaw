@@ -25,10 +25,10 @@
                 <th class="px-0 text-center">TEL</th>
                 <th class="px-0 text-center">EMAIL</th>
                 <th class="px-0 text-center">CONTACTO</th>
-                <th class="px-0 text-center">DESCRIPCION</th>
+                <th class="px-0 text-center">DESCRIPCIÖN</th>
                 <th class="px-0 text-center">RUBRO</th>
                 <th class="px-0 text-center">CC</th>
-                <th class="px-0" colspan="2">ACCION</th>
+                <th class="px-0" colspan="2">ACCIÓN</th>
             </tr>
         </thead>
         <tbody class="text-xs text-center">
@@ -59,7 +59,7 @@
                 
                 {{-- BORRAR PROVEEDOR --}}
                 <button class="" wire:click="borrarProveedor('{{$proveedor->id}}')"
-                        wire:confirm.prompt='Esta apunto de borrar un proveedor de la base de datos, esta seguro?|del'
+                        wire:confirm.prompt='Está a punto de borrar un proveedor de la base de datos, está seguro?|del'
                         type="button"><svg class="w-6 h-6 text-red-500 aria-hidden=true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">

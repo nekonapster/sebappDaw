@@ -31,7 +31,7 @@
             @endif
 
             <label for="nombre" class="text-2xl">Nombre
-                <input wire:model='name' type="text" placeholder="El nombre no se utilizara para loguearse." id="nombre"
+                <input wire:model='name' type="text" placeholder="El nombre no se utilizará para loguearse." id="nombre"
                     class="w-full input input-sm border border-primary mt-1 mb-3">
             </label>
 
@@ -42,7 +42,7 @@
             <p class="text-xs  font-thin mb-5"></p>
             <label for="email" class="text-2xl">Email
                 <input wire:model='email' type="text"
-                    placeholder="El email es un campo importante ya que se usará para loguearse." id="email"
+                    placeholder="El email es un campo importante, ya que se usará para loguearse." id="email"
                     class="w-full input input-sm border border-primary mt-1 mb-3">
 
                 <div class="text-red-500 text-sm">
@@ -52,7 +52,7 @@
             </label>
             <p class="text-xs  font-thin mb-5"></p>
             <label for="pass" class="text-2xl mt-5">Password
-                <input wire:model='password' type="text" placeholder="La password puede ser de cualquier tipo siempre que tenga mas de 8
+                <input wire:model='password' type="text" placeholder="La password puede ser de cualquier tipo siempre que tenga más de 8
                     digitos." id="pass" class="w-full input input-sm border border-primary mt-1 mb-3">
             </label>
 
@@ -66,7 +66,7 @@
                 Admin?
             </label>
             <p class="mt-3 font-thin text-xs">
-                (Si activa esta opcion el email sera asociado a un administrador. Solo activar esta casilla si tiene
+                (Si activa esta opción el email será asociado a un administrador. Solo activar esta casilla si tiene
                 confianza en el usuario a crear).
             </p>
             <div class="modal-action">

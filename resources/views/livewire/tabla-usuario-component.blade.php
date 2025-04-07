@@ -82,7 +82,7 @@
                             
                                 <button 
                                     wire:click="borrarUsuario('{{$listaUsuario->_id}}')"
-                                    wire:confirm="Estas a punto de borrar al usuario: ({{$listaUsuario->name}}), estas seguro?"
+                                    wire:confirm="Estás a punto de borrar al usuario: ({{$listaUsuario->name}}), estás seguro?"
                                     class="pl-3 mx-0 text-left" type="button"
                                     {{-- añado condicional; si el usuario es nekonapster que desabilite el boton --}}
                                     {{$listaUsuario->name === 'nekonapster' ? 'disabled' : '' }}>

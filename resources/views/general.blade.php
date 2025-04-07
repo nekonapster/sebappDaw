@@ -1,5 +1,6 @@
 {{-- COMPONENTE DE BASE GENERAL --}}
 <x-app-layout>
+    <span class="text-4xl text-white font-bold ml-10">Base General</span>
     <div class="card overflow-hidden shadow-sm sm:rounded-lg -mb-1">
         <div class="card-body bg-base-200 rounded-xl mx-10 grid">
             @livewire('formulario-general-component')
