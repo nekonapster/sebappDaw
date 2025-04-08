@@ -4,9 +4,8 @@
     <div class="py-5 bg-base-200 mx-10 rounded-xl">
         <div class="max-w-10xl mx-auto sm:px-6 lg:px-4">
             <div class="overflow-hidden sm:rounded-lg mx-5">
-                    <h1 class="text-2xl ml-1 mt-3">Vaciado de tablas</h1>
-                <span class="text-sm text-left">Estás en una zona peligrosa, los cambios que hagas acá no son
-                    reversibles y sé perderá toda la información almacenada en las base de datos.</span>
+                <h1 class="text-2xl ml-0 mt-3">Vaciado de tablas</h1>
+                <span class="text-sm text-left">Estás en una zona peligrosa, los cambios que hagas acá no son reversibles y sé perderá toda la información almacenada en las base de datos.</span>
                 </div>
             </div>
         </div>
