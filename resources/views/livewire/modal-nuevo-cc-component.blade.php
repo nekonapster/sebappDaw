@@ -7,10 +7,13 @@
         <div class="card bg-base-100 w-96 shadow-xl">
             <div class="card-body items-center">
                 <div>
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                      </form>
                     <p class="mb-5 text-start text-2xl w-full">Nueva Cuenta Contable</p>
                     <div class="divider"></div>
-
-
+                    
+                    
                     @if (session('msg_CC'))
                     <div role="alert" class="alert alert-success flex justify-center mb-5" id="mensajeCC">
                         {{session('msg_CC')}}

@@ -12,6 +12,12 @@
     <dialog id="my_modal_4" class="modal max-w-fill" wire:ignore.self>
 
         <div class="modal-box">
+            <form method="dialog">
+                {{-- llamamos a cerrarModal cuando detecta el click de la 'X' --}}
+                <button type="button" wire:click="cerrarModal" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            
+            
             <h3 class="text-3xl font-bold mb-6">Crear nuevo usuario</h3>
 
             @if (session('msg'))
@@ -90,7 +96,7 @@
                 $wire.cerrarModal(); // Llama a la función en el componente de Livewire
             }
         });
-        //recargamos la pagina cuando cerramos el modal con esc
+        // recargamos la pagina cuando cerramos el modal con esc
         $wire.on('modalClosed', () => {
                 location.reload();
         });

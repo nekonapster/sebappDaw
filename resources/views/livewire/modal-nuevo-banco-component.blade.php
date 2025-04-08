@@ -4,6 +4,9 @@
     {{-- ! modal para 'Nuevo Banco' --}}
     <dialog id="nuevoBanco" class="modal" wire:ignore.self>
         <div class="card bg-base-100 w-96 shadow-xl">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+              </form>
             <div class="card-body items-center">
                 <div>
                     <p class="mb-5 text-start text-2xl w-full">Nueva Banco</p>

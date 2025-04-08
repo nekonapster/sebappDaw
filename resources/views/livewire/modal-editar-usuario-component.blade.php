@@ -33,8 +33,12 @@
                     </label>
                 </div>
 
+                {{-- ! modal editar usuario --}}
                 <div class="modal-action">
                     <!-- if there is a button, it will close the modal -->
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                      </form>
                     <button 
                         wire:click="editarUsuario" 
                         class="btn btn-success px-3"

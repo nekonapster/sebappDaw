@@ -5,12 +5,15 @@
 	{{-- ! modal 'nuevo proveedor' --}}
 	<dialog id="nuevoProveedor" class="modal" wire:ignore.self>
 		<div class="modal-box max-w-full w-screen max-h-screen h-screen">
+			<form method="dialog">
+				<button class="btn btn-sm btn-circle btn-ghost absolute right-5 top-2">✕</button>
+			</form>
 			<h3 class="font-bold text-lg">Proveedor</h3>
 			<div class="card-body card-bordered px-3">
 				<div class="grid grid-cols-4 gap-3">
 					{{-- <label class="text-xs">ID
 						<input wire:model='id_proveedor' type="text" placeholder="ID" class="input input-sm input-bordered w-full"
-							disabled />
+						disabled />
 					</label> --}}
 					<label class="text-xs">Proveedor
 						<input wire:model='proveedor_name' type="text"
@@ -69,6 +72,7 @@
 					{{-- ! modal para la carga masiva de datos y su boton --}}
 					@livewire('modal-carga-masiva-component')
 					<div>
+	
 						<button wire:click='editarProveedor' class="btn btn-sm btn-warning mr-5">Modificar</button>
 						<button wire:click='crearProveedor' class="btn btn-sm btn-accent">Guardar</button>
 					</div>
@@ -92,13 +96,13 @@
 	</dialog>
 
 
-			@script
-					<script>
-						document.addEventListener('keydown', (event) => {
+	@script
+	<script>
+		document.addEventListener('keydown', (event) => {
 							if (event.key === 'Escape') {
 									location.reload();
 							}
 					});
-					</script>
-			@endscript
+	</script>
+	@endscript
 </div>
