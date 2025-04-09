@@ -11,14 +11,17 @@
     {{-- ! modal para 'Carga masiva de datos' --}}
     <dialog id="modalCargaMasiva" class="modal" wire:ignore.self>
         <div class="card bg-base-100 shadow-xl">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+              </form>
             <p class="px-5 mt-3 text-2xl">Carga de proveedores <br><span class="text-xs">Puedes subir archivos xls y las
                     columnas tienen que tener encabezados</span></p>
             <div class="card-body items-center w-[500px] ">
                 <figure>
                     <img class="w-full" src="https://i.imgur.com/lavp2UO.png" alt="example table" />
                 </figure>
-                
-   
+
+
                 <form method="POST" action="{{ route('import-excel') }}" enctype="multipart/form-data" class="w-full">
                     @csrf
                     <input type="file" name="excel" class="file-input file-input-bordered file-input-xs w-full"
