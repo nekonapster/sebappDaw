@@ -109,34 +109,55 @@ new class extends Component {
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
-    <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
+   <!-- Responsive Navigation Menu -->
+<div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
+    <div class="pt-2 pb-3 space-y-1">
+        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
+            {{ __('Dashboard') }}
+        </x-responsive-nav-link>
+
+        <x-responsive-nav-link :href="route('baseGeneral')" :active="request()->routeIs('baseGeneral')" wire:navigate>
+            {{ __('Base general') }}
+        </x-responsive-nav-link>
+
+        <x-responsive-nav-link :href="route('saldos')" :active="request()->routeIs('saldos')" wire:navigate>
+            {{ __('Saldos') }}
+        </x-responsive-nav-link>
+
+        <x-responsive-nav-link 
+            :href="!auth()->guest() && auth()->user()->role !== 'guest' ? route('users') : '#'"
+            :class="auth()->guest() || auth()->user()->role === 'guest' ? 'opacity-25' : ''"
+            :active="request()->routeIs('users')" wire:navigate>
+            {{ __('Users') }}
+        </x-responsive-nav-link>
+
+        <x-responsive-nav-link 
+            :href="!auth()->guest() && auth()->user()->role !== 'guest' ? route('dangerZone') : '#'"
+            :class="auth()->guest() || auth()->user()->role === 'guest' ? 'opacity-25' : ''"
+            :active="request()->routeIs('dangerZone')" wire:navigate>
+            {{ __('DangerZone') }}
+        </x-responsive-nav-link>
+    </div>
+
+    <!-- Responsive Settings Options -->
+    <div class="pt-4 pb-1 border-t">
+        <div class="px-4">
+            <div class="font-medium text-base" x-data="{{ json_encode(['name' => auth()->user()->name]) }}"
+                x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
+            <div class="font-medium text-sm">{{ auth()->user()->email }}</div>
         </div>
 
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t">
-            <div class="px-4">
-                <div class="font-medium text-base" x-data="{{ json_encode(['name' => auth()->user()->name]) }}"
-                    x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
-                <div class="font-medium text-sm">{{ auth()->user()->email }}</div>
-            </div>
+        <div class="mt-3 space-y-1">
+            <x-responsive-nav-link :href="route('profile')" wire:navigate>
+                {{ __('Profile') }}
+            </x-responsive-nav-link>
 
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile')" wire:navigate>
-                    {{ __('Profile') }}
+            <!-- Authentication -->
+            <button wire:click="logout" class="w-full text-start">
+                <x-responsive-nav-link>
+                    {{ __('Log Out') }}
                 </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <button wire:click="logout" class="w-full text-start">
-                    <x-responsive-nav-link>
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </button>
-            </div>
+            </button>
         </div>
     </div>
-</nav>
+</div>
