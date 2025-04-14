@@ -1,6 +1,9 @@
 <div>
 	<dialog id="pagar" class="modal" wire:ignore.self>
 		<div class="modal-box">
+			<form method="dialog">
+				<button class="btn btn-sm btn-circle btn-ghost absolute right-5 top-2">✕</button>
+			</form>
 			<h3 class="text-lg font-bold mb-4">Va a pagar una factura</h3>
 
 			{{-- se activa si detecta cualquier mensaje de error --}}
