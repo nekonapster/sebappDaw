@@ -1,6 +1,6 @@
 {{-- COMPONENTE DEL PANEL --}}
 <x-app-layout>
-    <span class="text-4xl text-white font-bold ml-10">Dash Board</span>
+    <span class="text-4xl text-base-content font-bold ml-10">Dash Board</span>
     <div class="grid grid-cols-2 mx-10 gap-3" id="base">
         <div class="bg-base-200 rounded-lg p-3">
             @livewire('dashboard-component')
